@@ -1,2 +1,2 @@
 # pet-bulma
-Pet Project
+A simple pet project with bulma. 
