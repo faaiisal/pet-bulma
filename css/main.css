@@ -5,25 +5,43 @@
 * @link @Link url
 * @license MIT
 */
-html, body, div,
-h1, p, a {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%; }
+  border: 0; }
 
 body {
   margin: 0;
   overflow-x: hidden;
   word-break: break-word;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
+  font-family: "PT Sans", sans-serif;
+  color: #000000;
+  line-height: 1; }
+
+main {
+  display: block; }
+
+img {
+  border-style: none; }
 
 *, *::before, *::after {
   box-sizing: border-box; }
 
-/**
- * Remove the gray background on active links in IE 10.
- */
+ol, ul, li {
+  list-style: none; }
+
 a {
   background-color: transparent;
   border-style: none; }
@@ -31,58 +49,64 @@ a {
 a:focus {
   text-decoration: none; }
 
-.container {
-  max-width: 740px;
+.App {
+  background-color: rgba(255, 0, 0, 0.3);
+  max-width: 1230px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px; }
+  padding: 30px; }
+  .App__header {
+    position: relative; }
+  .App .navbar {
+    min-height: 0; }
+  .App .navbar-menu {
+    margin-top: 4rem;
+    margin-left: -135px; }
+  .App .navbar-start--bottom {
+    margin-top: 4rem;
+    margin-left: -595px; }
+  .App .button {
+    border: none;
+    background-color: purple;
+    color: #ffffff; }
+    .App .button__goShopping {
+      margin-left: 20px;
+      border: 1px solid red; }
 
-h1 {
-  font-size: 42px;
-  line-height: 43px;
-  font-weight: 700;
-  letter-spacing: -0.63;
-  color: rgba(0, 0, 0, 0.84);
-  padding-top: 30px;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+@media screen and (max-width: 1024px) {
+  .App {
+    background-color: rgba(0, 128, 0, 0.3);
+    max-width: 970px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px; } }
 
-p {
-  font-size: 21px;
-  line-height: 34px;
-  font-weight: 400;
-  letter-spacing: -0.063;
-  color: rgba(0, 0, 0, 0.84);
-  margin-top: 25px; }
-  p:last-child {
-    margin-bottom: 30px; }
-  p + p {
-    margin-top: 30px; }
+@media screen and (max-width: 750px) {
+  .App {
+    background-color: rgba(0, 0, 255, 0.3);
+    max-width: 740px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px; } }
 
-.Button {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  user-select: none;
-  border: 1px solid #867400;
-  padding: 5px 10px;
-  font-size: 16px;
-  line-height: 1.5;
-  border-radius: 4px;
-    border-radius-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
-
-.button--follow {
-  background-color: transparent;
-  height: 19px;
-  padding: 0 10px;
-  font-size: 14px;
-  line-height: 19px;
-  color: #867400;
-  text-transform: capitalize; }
-
-.button--getstart {
-  border-color: #635200;
-  background-color: transparent;
-  color: #504000; }
+@media screen and (max-width: 522px) {
+  .App {
+    background-color: rgba(255, 255, 0, 0.4);
+    width: 100%;
+    height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 5px 60px; }
+    .App .navbar {
+      background-color: rgba(255, 0, 0, 0.3); }
+    .App .navbar-menu {
+      margin-top: 0;
+      margin-left: 0; }
+    .App .navbar-end {
+      display: none; }
+    .App .navbar-start--bottom {
+      margin-top: 0;
+      margin-left: 0; } }

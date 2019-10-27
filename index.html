@@ -4,30 +4,86 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Medium</title>
+    <title>PetBulma</title>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-  <!-- body -->
-    <div class="container">
-      <h1>How to Build a Simple Chrome Extension in Vanilla JavaScript</h1>
-      <p>Today, I’m going to show you how to make Chrome extension in vanilla JavaScript — that is,
-        plain JavaScript without any additional frameworks like React, Angular, or Vue.</p>
-      <p>Building a Chrome extension doesn’t have to be difficult — in my first year of programming,
-        I released two extensions, and I made both using just HTML, CSS, and plain JavaScript.
-        In this article, I’ll walk you through how to the same in just a few minutes.
-      </p>
-      <p>I’ll be showing you how to make a simple Chrome extension dashboard from scratch.
-        If you have your own idea for an extension, however, and just want to know what to
-        add to your existing project files to get it working in Chrome, you can skip down to the section on customizing your own manifest.json file and icon.
-      </p>
-      <p>
-        A Chrome extension is essentially just a group of files that customizes your experience in the Google Chrome browser. There are a few different kinds of Chrome extensions; some activate when a certain condition is met, like when you’re on a store checkout page; some only pop up when you click on an icon; and some appear each time you open a new tab. Both of the extensions that I published this year are ‘new tab’ extensions; the first is Compliment Dash, a dashboard that keeps a to-do list and compliments the user, and the second is a tool for pastors called Liturgical.li. If you know how to code a basic website, then you can code this kind of extension without too much difficulty.
-      </p>
-      <p>
-        We’re going to keep things simple, so in this tutorial, we’ll just be using HTML, CSS, and some basic JavaScript, as well as customizing a manifest.json file that I’ll include below. Chrome extensions vary in complexity, so building a Chrome extension can be as simple or complicated as you want it to be. After you learn the basics here, you’ll be able to create something much more complicated using your own skillset.
-      </p>
+        <!-- body -->
+    <div class="App">
+      <header class="App__header">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+              <img src="assets/img/deligram.svg" width="112" height="28">
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item">
+                Home
+              </a>
+              <a class="navbar-item">
+                Documentation
+              </a>
+              <a class="navbar-item">
+                Home
+              </a>
+              <a class="navbar-item">
+                Documentation
+              </a>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button button__goShopping">
+                  <strong>Go Shopping</strong>
+                </a>
+                <a class="button is-light">
+                  <img src="assets/img/icon-user.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- <main class="App__main">Main</main>
+      <footer class="App__footer">Footer </footer> -->
     </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+    });
+  </script>
   </body>
 </html>
